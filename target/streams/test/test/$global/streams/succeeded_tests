@@ -1,0 +1,6 @@
+#Successful Tests
+#Tue Apr 24 10:33:49 ART 2018
+unit.controllers.PostControllerSpec=1524576826652
+functional.common.BlogApiServerSpec=1524576829220
+unit.services.PostServiceSpec=1524576825843
+unit.models.PostSpec=1524576826005

@@ -1,0 +1,39 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalatest.tools.Framework produced 4 initial tasks for 4 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(unit.services.PostServiceSpec, sbt.ForkMain$SubclassFingerscan@3432d0a0, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPostServiceSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPostService[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return list of posts[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(unit.models.PostSpec, sbt.ForkMain$SubclassFingerscan@61fb7975, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPostSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPost#Json[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Be able to write a JsValue of Post[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Be able to read a Json of Post[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(unit.controllers.PostControllerSpec, sbt.ForkMain$SubclassFingerscan@25c93d39, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPostControllerSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPostController#getPosts[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return posts[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(functional.common.BlogApiServerSpec, sbt.ForkMain$SubclassFingerscan@4c7ab4f7, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBlogApiServerSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mServer query should[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should work[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.[0m
+[0m[[0m[0minfo[0m] [0m[0mScalaTest[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 5 seconds, 273 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 5, Failed 0, Errors 0, Passed 5[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	unit.controllers.PostControllerSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	unit.models.PostSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	functional.common.BlogApiServerSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	unit.services.PostServiceSpec[0m

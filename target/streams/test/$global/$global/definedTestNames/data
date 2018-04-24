@@ -1,0 +1,1 @@
+["unit.services.PostServiceSpec","unit.models.PostSpec","unit.controllers.PostControllerSpec","functional.common.BlogApiServerSpec"]
