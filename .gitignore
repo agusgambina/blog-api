@@ -1,3 +1,11 @@
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
 
 # Created by https://www.gitignore.io/api/osx,vim,java,scala,linux,windows,intellij,sublimetext
 
@@ -197,6 +205,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
 
 # End of https://www.gitignore.io/api/osx,vim,java,scala,linux,windows,intellij,sublimetext
