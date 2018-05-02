@@ -4,6 +4,6 @@ import models.Post
 
 trait PostRepository {
 
-  def find: Either[String, List[Post]]
+  def find: Either[String, Set[Post]]
 
 }

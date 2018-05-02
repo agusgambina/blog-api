@@ -12,16 +12,16 @@ class PostServiceSpec extends PlaySpec with MockitoSugar {
 
   "PostService" should {
     "return list of posts" in {
-      val post1 = new Post(TestHelpers.randomId, TestHelpers.randomPostTitle, TestHelpers.randomPostBody)
-      val post2 = new Post(TestHelpers.randomId, TestHelpers.randomPostTitle, TestHelpers.randomPostBody)
-      val post3 = new Post(TestHelpers.randomId, TestHelpers.randomPostTitle, TestHelpers.randomPostBody)
+      val post1 = TestHelpers.randomPost
+      val post2 = TestHelpers.randomPost
+      val post3 = TestHelpers.randomPost
       val mockPostRepository = mock[PostRepository]
-      when(mockPostRepository.find) thenReturn Right(List(post1, post2, post3))
+      when(mockPostRepository.find).thenReturn(Right(Set(post1, post2, post3)))
 
       val postService = new PostServiceImp(mockPostRepository)
 
       val posts = postService.getPosts
-      posts.right.get mustBe List(post1, post2, post3)
+      posts.right.get mustBe Set(post1, post2, post3)
     }
   }
 

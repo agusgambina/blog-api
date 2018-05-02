@@ -1,5 +1,7 @@
 package utils
 
+import models.Post
+
 import scala.util.Random
 
 object TestHelpers {
@@ -13,6 +15,8 @@ object TestHelpers {
   def randomPostTitle = LoremIpsum.getWords(Random.nextInt(maxTitleLength)+1)
 
   def randomPostBody = LoremIpsum.getParagraphs(Random.nextInt(maxBodyLength)+1)
+
+  def randomPost: Post = new Post(randomId, randomPostTitle, randomPostBody)
 
 
 }
