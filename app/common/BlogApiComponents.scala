@@ -4,16 +4,25 @@ import com.softwaremill.macwire.wire
 import controllers.{Assets, AssetsComponents, PostController}
 import play.api.ApplicationLoader.Context
 import play.api.BuiltInComponentsFromContext
+import play.api.db.evolutions.EvolutionsComponents
+import play.api.db.{DBComponents, HikariCPComponents}
 import play.api.routing.Router
 import play.filters.HttpFiltersComponents
 import repositories.implementations.PostRepositoryImp
 import router.Routes
 import services.implementations.PostServiceImp
 
+import scala.concurrent.Future
+
 class BlogApiComponents(context: Context)
   extends BuiltInComponentsFromContext(context)
+  with DBComponents
+  with EvolutionsComponents
+  with HikariCPComponents
   with AssetsComponents
   with HttpFiltersComponents {
+
+  lazy val blogDatabase = dbApi.database("default")
 
   // Router
   override lazy val assets = wire[Assets]
@@ -22,7 +31,6 @@ class BlogApiComponents(context: Context)
   lazy val router: Router = blogApiRouter
 
   // Controllers
-  //lazy val homeController = wire[HomeController]
   lazy val postController = wire[PostController]
 
   // Services
@@ -30,5 +38,10 @@ class BlogApiComponents(context: Context)
 
   // Repositories
   lazy val postRepository = wire[PostRepositoryImp]
+
+  //Hookups
+  applicationLifecycle.addStopHook(() => Future.successful {
+    blogDatabase.shutdown()
+  })
 
 }
