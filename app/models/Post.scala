@@ -5,7 +5,7 @@ import com.github.nscala_time.time.Imports._
 import play.api.libs.json._
 
 case class Post(
-  id: Int,
+  id: Long,
   title: String,
   body: String,
   isDeleted: Boolean = false,

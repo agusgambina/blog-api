@@ -4,6 +4,6 @@ import models.Post
 
 trait PostService {
 
-  def getPosts: Either[String, Set[Post]]
+  def getPosts: List[Post]
 
 }

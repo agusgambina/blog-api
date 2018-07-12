@@ -6,7 +6,7 @@ import play.api.db.evolutions.Evolutions
 trait BlogApiDBTest {
 
   implicit val testDatabase = Databases.inMemory(
-    name = "blog_db",
+    name = "default",
     urlOptions = Map(
       "MODE" -> "MYSQL"
     ),

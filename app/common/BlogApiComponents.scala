@@ -22,7 +22,7 @@ class BlogApiComponents(context: Context)
   with AssetsComponents
   with HttpFiltersComponents {
 
-  lazy val blogDatabase = dbApi.database("default")
+  lazy val database = dbApi.database("default")
 
   // Router
   override lazy val assets = wire[Assets]
@@ -41,7 +41,7 @@ class BlogApiComponents(context: Context)
 
   //Hookups
   applicationLifecycle.addStopHook(() => Future.successful {
-    blogDatabase.shutdown()
+    database.shutdown()
   })
 
 }
