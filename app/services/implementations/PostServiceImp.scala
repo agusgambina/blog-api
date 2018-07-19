@@ -6,6 +6,6 @@ import services.PostService
 
 class PostServiceImp(postRepository: PostRepository) extends PostService {
 
-  override def getPosts: List[Post]  = postRepository.findAll
+  override def get: List[Post]  = postRepository.findAll
 
 }

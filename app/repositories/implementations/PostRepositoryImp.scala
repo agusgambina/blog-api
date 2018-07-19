@@ -34,6 +34,7 @@ class PostRepositoryImp(database: Database) extends PostRepository {
         SELECT *
         FROM posts
         WHERE id = {postId}
+        AND is_deleted IS false
       """).on('postId -> postId).as(parser.singleOpt)
   }
 }
